@@ -159,4 +159,9 @@ view: dm_gl_acct_fact {
     type: count
     drill_fields: []
   }
+
+  measure:  sum {
+    type: sum
+    sql: ${txn_amt} ;;
+  }
 }
