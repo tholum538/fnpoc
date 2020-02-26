@@ -421,4 +421,15 @@ view: dm_txn_fact {
     type: count
     drill_fields: []
   }
+
+  measure: credit_amt {
+    type: number
+    sql: CASE WHEN ${amt} > 0  THEN ${amt} ELSE 0 END ;;
+
+  }
+
+  measure: debit_amt {
+    type: number
+    sql: CASE WHEN ${amt} < 0  THEN ${amt} * -1 ELSE 0 END ;;
+  }
 }
