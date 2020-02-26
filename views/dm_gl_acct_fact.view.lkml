@@ -145,7 +145,7 @@ view: dm_gl_acct_fact {
   }
 
   measure: txn_amt {
-    type: number
+    type: sum
     sql: ${TABLE}.TXN_AMT ;;
   }
 
