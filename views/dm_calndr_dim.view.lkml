@@ -8,6 +8,7 @@ view: dm_calndr_dim {
 
   dimension: calndr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CALNDR_DIM_ID ;;
   }
 
