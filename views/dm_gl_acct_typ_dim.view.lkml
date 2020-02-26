@@ -77,6 +77,7 @@ view: dm_gl_acct_typ_dim {
 
   dimension: gl_acct_typ_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCT_TYP_DIM_ID ;;
   }
 

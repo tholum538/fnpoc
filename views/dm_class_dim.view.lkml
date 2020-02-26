@@ -3,6 +3,7 @@ view: dm_class_dim {
 
   dimension: class_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CLASS_DIM_ID ;;
   }
 
@@ -23,6 +24,7 @@ view: dm_class_dim {
 
   dimension: class_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CLASS_PARNT_DIM_ID ;;
   }
 

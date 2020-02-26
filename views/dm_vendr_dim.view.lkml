@@ -252,6 +252,7 @@ view: dm_vendr_dim {
 
   dimension: vendr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.VENDR_DIM_ID ;;
   }
 

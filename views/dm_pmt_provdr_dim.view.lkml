@@ -77,6 +77,7 @@ view: dm_pmt_provdr_dim {
 
   dimension: pmt_provdr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.PMT_PROVDR_DIM_ID ;;
   }
 

@@ -107,6 +107,7 @@ view: dm_sbsdry_dim {
 
   dimension: sbsdry_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
@@ -142,6 +143,7 @@ view: dm_sbsdry_dim {
 
   dimension: sbsdry_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.SBSDRY_PARNT_DIM_ID ;;
   }
 

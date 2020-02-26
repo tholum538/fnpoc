@@ -8,6 +8,7 @@ view: dm_txn_fact {
 
   dimension: calndr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CALNDR_DIM_ID ;;
   }
 
@@ -18,6 +19,7 @@ view: dm_txn_fact {
 
   dimension: class_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CLASS_DIM_ID ;;
   }
 
@@ -68,16 +70,19 @@ view: dm_txn_fact {
 
   dimension: curncy_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CURNCY_DIM_ID ;;
   }
 
   dimension: cust_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CUST_DIM_ID ;;
   }
 
   dimension: dept_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.DEPT_DIM_ID ;;
   }
 
@@ -182,16 +187,19 @@ view: dm_txn_fact {
 
   dimension: gl_acct_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCT_DIM_ID ;;
   }
 
   dimension: gl_acct_typ_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCT_TYP_DIM_ID ;;
   }
 
   dimension: gl_amt_typ_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_AMT_TYP_DIM_ID ;;
   }
 
@@ -202,6 +210,7 @@ view: dm_txn_fact {
 
   dimension: item_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.ITEM_DIM_ID ;;
   }
 
@@ -222,6 +231,7 @@ view: dm_txn_fact {
 
   dimension: loc_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.LOC_DIM_ID ;;
   }
 
@@ -312,6 +322,7 @@ view: dm_txn_fact {
 
   dimension: sbsdry_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
@@ -402,6 +413,7 @@ view: dm_txn_fact {
 
   dimension: vendr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.VENDR_DIM_ID ;;
   }
 

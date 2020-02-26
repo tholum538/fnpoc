@@ -102,6 +102,7 @@ view: dm_loc_dim {
 
   dimension: loc_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.LOC_DIM_ID ;;
   }
 
@@ -122,6 +123,7 @@ view: dm_loc_dim {
 
   dimension: loc_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.LOC_PARNT_DIM_ID ;;
   }
 

@@ -8,6 +8,7 @@ view: dm_cr_card_type_dim {
 
   dimension: cr_card_type_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CR_CARD_TYPE_DIM_ID ;;
   }
 

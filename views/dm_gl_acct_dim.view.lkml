@@ -167,11 +167,13 @@ view: dm_gl_acct_dim {
 
   dimension: gl_acct_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCT_DIM_ID ;;
   }
 
   dimension: gl_acct_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCT_PARNT_DIM_ID ;;
   }
 

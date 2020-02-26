@@ -3,6 +3,7 @@ view: dm_curncy_dim {
 
   dimension: curncy_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CURNCY_DIM_ID ;;
   }
 

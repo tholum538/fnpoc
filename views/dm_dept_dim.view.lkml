@@ -3,6 +3,7 @@ view: dm_dept_dim {
 
   dimension: dept_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.DEPT_DIM_ID ;;
   }
 
@@ -28,6 +29,7 @@ view: dm_dept_dim {
 
   dimension: dept_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.DEPT_PARNT_DIM_ID ;;
   }
 

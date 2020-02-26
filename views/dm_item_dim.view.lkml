@@ -172,6 +172,7 @@ view: dm_item_dim {
 
   dimension: item_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.ITEM_DIM_ID ;;
   }
 
@@ -202,6 +203,7 @@ view: dm_item_dim {
 
   dimension: item_parnt_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.ITEM_PARNT_DIM_ID ;;
   }
 

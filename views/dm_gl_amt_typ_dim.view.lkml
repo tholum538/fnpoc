@@ -82,6 +82,7 @@ view: dm_gl_amt_typ_dim {
 
   dimension: gl_amt_typ_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_AMT_TYP_DIM_ID ;;
   }
 

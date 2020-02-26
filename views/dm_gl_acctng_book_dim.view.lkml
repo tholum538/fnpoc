@@ -82,6 +82,7 @@ view: dm_gl_acctng_book_dim {
 
   dimension: gl_acctng_book_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.GL_ACCTNG_BOOK_DIM_ID ;;
   }
 

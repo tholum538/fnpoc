@@ -58,6 +58,7 @@ view: dm_cust_dim {
 
   dimension: cust_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CUST_DIM_ID ;;
   }
 

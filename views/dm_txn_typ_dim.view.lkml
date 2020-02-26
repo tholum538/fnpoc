@@ -77,6 +77,7 @@ view: dm_txn_typ_dim {
 
   dimension: txn_typ_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.TXN_TYP_DIM_ID ;;
   }
 
