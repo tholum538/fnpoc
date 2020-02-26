@@ -10,21 +10,21 @@ datagroup: fnpoc2_default_datagroup {
 
 persist_with: fnpoc2_default_datagroup
 
-explore: dim_sys_date_schema {}
+#explore: dim_sys_date_schema {}
 
-explore: dm_calndr_dim {}
+#explore: dm_calndr_dim {}
 
-explore: dm_class_dim {}
+#explore: dm_class_dim {}
 
-explore: dm_curncy_dim {}
+#explore: dm_curncy_dim {}
 
-explore: dm_cust_dim {}
+#explore: dm_cust_dim {}
 
-explore: dm_date {}
+#explore: dm_date {}
 
-explore: dm_dept_dim {}
+#explore: dm_dept_dim {}
 
-explore: dm_gl_acct_dim {}
+#explore: dm_gl_acct_dim {}
 
 explore: dm_gl_acct_fact {
   join: dm_date {
@@ -124,17 +124,17 @@ explore: dm_gl_acct_fact {
   }
 }
 
-explore: dm_gl_acct_typ_dim {}
+#explore: dm_gl_acct_typ_dim {}
 
-explore: dm_gl_acctng_book_dim {}
+#explore: dm_gl_acctng_book_dim {}
 
-explore: dm_gl_amt_typ_dim {}
+#explore: dm_gl_amt_typ_dim {}
 
-explore: dm_item_dim {}
+#explore: dm_item_dim {}
 
-explore: dm_loc_dim {}
+#explore: dm_loc_dim {}
 
-explore: dm_sbsdry_dim {}
+#explore: dm_sbsdry_dim {}
 
 explore: dm_txn_fact {
   join: dm_calndr_dim {
@@ -239,23 +239,23 @@ explore: dm_txn_fact {
   }
 }
 
-explore: dm_txn_typ_dim {}
+#explore: dm_txn_typ_dim {}
 
-explore: dm_vendr_dim {}
+#explore: dm_vendr_dim {}
 
-explore: dmv_class_dim {}
+#explore: dmv_class_dim {}
 
-explore: dmv_cust_dim {}
+#explore: dmv_cust_dim {}
 
-explore: dmv_dept_dim {}
+#explore: dmv_dept_dim {}
 
-explore: dmv_gl_acct_dim {}
+#explore: dmv_gl_acct_dim {}
 
-explore: dmv_item_dim {}
+#explore: dmv_item_dim {}
 
-explore: dmv_loc_dim {}
+#explore: dmv_loc_dim {}
 
-explore: dmv_sbsdry_dim {}
+#explore: dmv_sbsdry_dim {}
 
 explore: etl_bal_ctrl_execn {
   join: etl_run {
@@ -273,11 +273,11 @@ explore: etl_err_log {
   }
 }
 
-explore: etl_err_mstr {}
+#explore: etl_err_mstr {}
 
-explore: etl_err_type {}
+#explore: etl_err_type {}
 
-explore: etl_par {}
+#explore: etl_par {}
 
 explore: etl_proc_execn {
   join: etl_run {
@@ -295,10 +295,10 @@ explore: etl_proc_execn_targ_tbl {
   }
 }
 
-explore: etl_run {}
+#explore: etl_run {}
 
-explore: etl_run_typ {}
+#explore: etl_run_typ {}
 
-explore: etl_src_file_hdr {}
+#explore: etl_src_file_hdr {}
 
-explore: etl_tbl {}
+#explore: etl_tbl {}
