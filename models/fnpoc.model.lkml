@@ -256,7 +256,7 @@ explore: dm_txn_fact {
 #explore: dmv_loc_dim {}
 
 #explore: dmv_sbsdry_dim {}
-
+ #etl_sess_nm
 explore: etl_bal_ctrl_execn {
   join: etl_run {
     type: left_outer
@@ -282,7 +282,12 @@ explore: etl_err_log {
 explore: etl_proc_execn {
   join: etl_run {
     type: left_outer
-    sql_on: ${etl_proc_execn.etl_run_id} = ${etl_run.etl_run_id} ;;
+    sql_on: ${etl_proc_execn.etl_run_id} = ${etl_run.etl_run_id}  ;;
+    relationship: many_to_one
+  }
+  join: etl_proc_execn_targ_tbl {
+    type: left_outer
+    sql_on: ${etl_proc_execn.etl_run_id} = ${etl_proc_execn_targ_tbl.etl_run_id} and  ${etl_proc_execn.etl_sess_nm} = ${etl_proc_execn_targ_tbl.etl_sess_nm};;
     relationship: many_to_one
   }
 }

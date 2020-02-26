@@ -144,17 +144,17 @@ view: dm_gl_acct_fact {
     sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
-  dimension: txn_amt {
+  measure: txn_amt {
     type: number
     sql: ${TABLE}.TXN_AMT ;;
   }
 
-  dimension: txn_forgn_amt {
+  measure: txn_forgn_amt {
     type: number
     sql: ${TABLE}.TXN_FORGN_AMT ;;
   }
 
-  dimension: txn_qty {
+  measure: txn_qty {
     type: number
     sql: ${TABLE}.TXN_QTY ;;
   }

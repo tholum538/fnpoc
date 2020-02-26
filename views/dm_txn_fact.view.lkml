@@ -1,7 +1,7 @@
 view: dm_txn_fact {
   sql_table_name: EDW.DM_TXN_FACT ;;
 
-  dimension: amt {
+  measure: amt {
     type: number
     sql: ${TABLE}.AMT ;;
   }
@@ -175,7 +175,7 @@ view: dm_txn_fact {
     sql: ${TABLE}.EXPCTD_RECPT_DATE ;;
   }
 
-  dimension: forgn_amt {
+  measure: forgn_amt {
     type: number
     sql: ${TABLE}.FORGN_AMT ;;
   }
@@ -195,7 +195,7 @@ view: dm_txn_fact {
     sql: ${TABLE}.GL_AMT_TYP_DIM_ID ;;
   }
 
-  dimension: gross_amt {
+  measure: gross_amt {
     type: number
     sql: ${TABLE}.GROSS_AMT ;;
   }
@@ -230,12 +230,12 @@ view: dm_txn_fact {
     sql: ${TABLE}.MEMO ;;
   }
 
-  dimension: net_amt {
+  measure: net_amt {
     type: number
     sql: ${TABLE}.NET_AMT ;;
   }
 
-  dimension: net_forgn_amt {
+  measure: net_forgn_amt {
     type: number
     sql: ${TABLE}.NET_FORGN_AMT ;;
   }
