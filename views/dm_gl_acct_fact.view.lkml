@@ -18,21 +18,25 @@ view: dm_gl_acct_fact {
 
   dimension: calndr_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CALNDR_DIM_ID ;;
   }
 
   dimension: class_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CLASS_DIM_ID ;;
   }
 
   dimension: cust_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.CUST_DIM_ID ;;
   }
 
   dimension: dept_dim_id {
     type: number
+    hidden: yes
     sql: ${TABLE}.DEPT_DIM_ID ;;
   }
 
@@ -101,6 +105,7 @@ view: dm_gl_acct_fact {
   }
 
   dimension: gl_acct_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.GL_ACCT_DIM_ID ;;
   }
@@ -116,21 +121,25 @@ view: dm_gl_acct_fact {
   }
 
   dimension: gl_amt_typ_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.GL_AMT_TYP_DIM_ID ;;
   }
 
   dimension: item_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.ITEM_DIM_ID ;;
   }
 
   dimension: loc_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.LOC_DIM_ID ;;
   }
 
   dimension: sbsdry_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
@@ -151,6 +160,7 @@ view: dm_gl_acct_fact {
   }
 
   dimension: vendr_dim_id {
+    hidden: yes
     type: number
     sql: ${TABLE}.VENDR_DIM_ID ;;
   }
