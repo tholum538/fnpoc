@@ -11,7 +11,7 @@ view: etl_par {
     sql: ${TABLE}.ETL_PAR_NM ;;
   }
 
-  dimension: etl_par_seq_nb {
+  measure: etl_par_seq_nb {
     type: number
     sql: ${TABLE}.ETL_PAR_SEQ_NB ;;
   }

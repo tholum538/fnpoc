@@ -1,24 +1,14 @@
 view: dm_txn_fact {
   sql_table_name: EDW.DM_TXN_FACT ;;
 
-  dimension: amt {
+  measure: amt {
     type: number
     sql: ${TABLE}.AMT ;;
-  }
-
-  dimension: calndr_dim_id {
-    type: number
-    sql: ${TABLE}.CALNDR_DIM_ID ;;
   }
 
   dimension: chk_or_doc_num {
     type: string
     sql: ${TABLE}.CHK_OR_DOC_NUM ;;
-  }
-
-  dimension: class_dim_id {
-    type: number
-    sql: ${TABLE}.CLASS_DIM_ID ;;
   }
 
   dimension_group: clrd {
@@ -64,21 +54,6 @@ view: dm_txn_fact {
     convert_tz: no
     datatype: date
     sql: ${TABLE}.CREATED_DATE ;;
-  }
-
-  dimension: curncy_dim_id {
-    type: number
-    sql: ${TABLE}.CURNCY_DIM_ID ;;
-  }
-
-  dimension: cust_dim_id {
-    type: number
-    sql: ${TABLE}.CUST_DIM_ID ;;
-  }
-
-  dimension: dept_dim_id {
-    type: number
-    sql: ${TABLE}.DEPT_DIM_ID ;;
   }
 
   dimension_group: due {
@@ -160,24 +135,29 @@ view: dm_txn_fact {
     sql: ${TABLE}.ETL_UPDATE_DATE ;;
   }
 
-  dimension_group: expctd_recpt {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}.EXPCTD_RECPT_DATE ;;
+  dimension: calndr_dim_id {
+    type: number
+    sql: ${TABLE}.CALNDR_DIM_ID ;;
   }
 
-  dimension: forgn_amt {
+  dimension: class_dim_id {
     type: number
-    sql: ${TABLE}.FORGN_AMT ;;
+    sql: ${TABLE}.CLASS_DIM_ID ;;
+  }
+
+  dimension: curncy_dim_id {
+    type: number
+    sql: ${TABLE}.CURNCY_DIM_ID ;;
+  }
+
+  dimension: cust_dim_id {
+    type: number
+    sql: ${TABLE}.CUST_DIM_ID ;;
+  }
+
+  dimension: dept_dim_id {
+    type: number
+    sql: ${TABLE}.DEPT_DIM_ID ;;
   }
 
   dimension: gl_acct_dim_id {
@@ -195,14 +175,54 @@ view: dm_txn_fact {
     sql: ${TABLE}.GL_AMT_TYP_DIM_ID ;;
   }
 
-  dimension: gross_amt {
+  dimension: loc_dim_id {
     type: number
-    sql: ${TABLE}.GROSS_AMT ;;
+    sql: ${TABLE}.LOC_DIM_ID ;;
+  }
+
+  dimension: sbsdry_dim_id {
+    type: number
+    sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
   dimension: item_dim_id {
     type: number
     sql: ${TABLE}.ITEM_DIM_ID ;;
+  }
+
+  dimension: txn_typ_dim_id {
+    type: number
+    sql: ${TABLE}.TXN_TYP_DIM_ID ;;
+  }
+
+  dimension: vendr_dim_id {
+    type: number
+    sql: ${TABLE}.VENDR_DIM_ID ;;
+  }
+
+  dimension_group: expctd_recpt {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.EXPCTD_RECPT_DATE ;;
+  }
+
+  measure: forgn_amt {
+    type: number
+    sql: ${TABLE}.FORGN_AMT ;;
+  }
+
+  measure: gross_amt {
+    type: number
+    sql: ${TABLE}.GROSS_AMT ;;
   }
 
   dimension_group: last_mod_gmt {
@@ -220,22 +240,17 @@ view: dm_txn_fact {
     sql: ${TABLE}.LAST_MOD_GMT_DATE ;;
   }
 
-  dimension: loc_dim_id {
-    type: number
-    sql: ${TABLE}.LOC_DIM_ID ;;
-  }
-
   dimension: memo {
     type: string
     sql: ${TABLE}.MEMO ;;
   }
 
-  dimension: net_amt {
+  measure: net_amt {
     type: number
     sql: ${TABLE}.NET_AMT ;;
   }
 
-  dimension: net_forgn_amt {
+  measure: net_forgn_amt {
     type: number
     sql: ${TABLE}.NET_FORGN_AMT ;;
   }
@@ -245,32 +260,32 @@ view: dm_txn_fact {
     sql: ${TABLE}.NON_POSTNG_LINE_FLG ;;
   }
 
-  dimension: qty_allocd {
+  measure: qty_allocd {
     type: number
     sql: ${TABLE}.QTY_ALLOCD ;;
   }
 
-  dimension: qty_billd {
+  measure: qty_billd {
     type: number
     sql: ${TABLE}.QTY_BILLD ;;
   }
 
-  dimension: qty_cmitd {
+  measure: qty_cmitd {
     type: number
     sql: ${TABLE}.QTY_CMITD ;;
   }
 
-  dimension: qty_packd {
+  measure: qty_packd {
     type: number
     sql: ${TABLE}.QTY_PACKD ;;
   }
 
-  dimension: qty_pickd {
+  measure: qty_pickd {
     type: number
     sql: ${TABLE}.QTY_PICKD ;;
   }
 
-  dimension: qty_shipped {
+  measure: qty_shipped {
     type: number
     sql: ${TABLE}.QTY_SHIPPED ;;
   }
@@ -308,11 +323,6 @@ view: dm_txn_fact {
   dimension: rev_cmitmnt_stat {
     type: string
     sql: ${TABLE}.REV_CMITMNT_STAT ;;
-  }
-
-  dimension: sbsdry_dim_id {
-    type: number
-    sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
   dimension_group: shpmnt_rcvd {
@@ -395,14 +405,9 @@ view: dm_txn_fact {
     sql: ${TABLE}.TXN_STAT ;;
   }
 
-  dimension: txn_typ_dim_id {
+  measure: debit_amt{
     type: number
-    sql: ${TABLE}.TXN_TYP_DIM_ID ;;
-  }
-
-  dimension: vendr_dim_id {
-    type: number
-    sql: ${TABLE}.VENDR_DIM_ID ;;
+    sql: case when "EDW"."Dm Txn Fact"."Amt" > 0 then "EDW"."Dm Txn Fact"."Amt" else 0 ;;
   }
 
   measure: count {

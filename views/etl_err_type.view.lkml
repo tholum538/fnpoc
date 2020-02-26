@@ -11,7 +11,7 @@ view: etl_err_type {
     sql: ${TABLE}.ERR_TYPE_DESC ;;
   }
 
-  dimension: err_type_id {
+  measure: err_type_id {
     type: number
     sql: ${TABLE}.ERR_TYPE_ID ;;
   }

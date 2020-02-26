@@ -114,12 +114,12 @@ view: etl_bal_ctrl_execn {
     sql: ${TABLE}.TARG_MDL_VRSN_NM ;;
   }
 
-  dimension: targ_row_cn {
+  measure: targ_row_cn {
     type: number
     sql: ${TABLE}.TARG_ROW_CN ;;
   }
 
-  dimension: targ_sum_am {
+  measure: targ_sum_am {
     type: number
     sql: ${TABLE}.TARG_SUM_AM ;;
   }

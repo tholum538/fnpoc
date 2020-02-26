@@ -41,12 +41,12 @@ view: etl_proc_execn {
     sql: ${TABLE}.SRC_MDL_VRSN_NM ;;
   }
 
-  dimension: src_row_cn {
+  measure: src_row_cn {
     type: number
     sql: ${TABLE}.SRC_ROW_CN ;;
   }
 
-  dimension: src_sum_am {
+  measure: src_sum_am {
     type: number
     sql: ${TABLE}.SRC_SUM_AM ;;
   }

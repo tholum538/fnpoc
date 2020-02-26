@@ -16,26 +16,6 @@ view: dm_gl_acct_fact {
     sql: ${TABLE}.ACTVTY_DATE ;;
   }
 
-  dimension: calndr_dim_id {
-    type: number
-    sql: ${TABLE}.CALNDR_DIM_ID ;;
-  }
-
-  dimension: class_dim_id {
-    type: number
-    sql: ${TABLE}.CLASS_DIM_ID ;;
-  }
-
-  dimension: cust_dim_id {
-    type: number
-    sql: ${TABLE}.CUST_DIM_ID ;;
-  }
-
-  dimension: dept_dim_id {
-    type: number
-    sql: ${TABLE}.DEPT_DIM_ID ;;
-  }
-
   dimension: etl_dm_tag {
     type: string
     sql: ${TABLE}.ETL_DM_TAG ;;
@@ -99,17 +79,29 @@ view: dm_gl_acct_fact {
     datatype: date
     sql: ${TABLE}.ETL_UPDATE_DATE ;;
   }
+  dimension: calndr_dim_id {
+    type: number
+    sql: ${TABLE}.CALNDR_DIM_ID ;;
+  }
 
+  dimension: class_dim_id {
+    type: number
+    sql: ${TABLE}.CLASS_DIM_ID ;;
+  }
+
+  dimension: cust_dim_id {
+    type: number
+    sql: ${TABLE}.CUST_DIM_ID ;;
+  }
+
+  dimension: dept_dim_id {
+    type: number
+    sql: ${TABLE}.DEPT_DIM_ID ;;
+  }
   dimension: gl_acct_dim_id {
     type: number
     sql: ${TABLE}.GL_ACCT_DIM_ID ;;
   }
-
-  dimension: gl_acct_fact_id {
-    type: number
-    sql: ${TABLE}.GL_ACCT_FACT_ID ;;
-  }
-
   dimension: gl_acct_typ_dim_id {
     type: number
     sql: ${TABLE}.GL_ACCT_TYP_DIM_ID ;;
@@ -135,33 +127,33 @@ view: dm_gl_acct_fact {
     sql: ${TABLE}.SBSDRY_DIM_ID ;;
   }
 
-  dimension: txn_amt {
-    type: number
-    sql: ${TABLE}.TXN_AMT ;;
-  }
-
-  dimension: txn_forgn_amt {
-    type: number
-    sql: ${TABLE}.TXN_FORGN_AMT ;;
-  }
-
-  dimension: txn_qty {
-    type: number
-    sql: ${TABLE}.TXN_QTY ;;
-  }
-
   dimension: vendr_dim_id {
     type: number
     sql: ${TABLE}.VENDR_DIM_ID ;;
   }
 
+  dimension: gl_acct_fact_id {
+    type: number
+    sql: ${TABLE}.GL_ACCT_FACT_ID ;;
+  }
+
+  measure: txn_amt {
+    type: number
+    sql: ${TABLE}.TXN_AMT ;;
+  }
+
+  measure: txn_forgn_amt {
+    type: number
+    sql: ${TABLE}.TXN_FORGN_AMT ;;
+  }
+
+  measure: txn_qty {
+    type: number
+    sql: ${TABLE}.TXN_QTY ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
-  }
-
-  measure:  sum {
-    type: sum
-    sql: ${txn_amt} ;;
   }
 }
