@@ -149,13 +149,13 @@ view: dm_gl_acct_fact {
     sql: ${TABLE}.TXN_AMT ;;
   }
 
-  measure: credit_amt {
+  measure: debit_amt {
     type: number
     sql: CASE WHEN ${txn_amt} > 0  THEN ${txn_amt} ELSE 0 END ;;
 
   }
 
-  measure: debit_amt {
+  measure: credit_amt {
     type: number
     sql: CASE WHEN ${txn_amt} < 0  THEN ${txn_amt} * -1 ELSE 0 END ;;
   }
