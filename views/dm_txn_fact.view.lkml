@@ -2,7 +2,7 @@ view: dm_txn_fact {
   sql_table_name: EDW.DM_TXN_FACT ;;
 
   measure: amt {
-    type: number
+    type: sum
     sql: ${TABLE}.AMT ;;
   }
 
