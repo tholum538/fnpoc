@@ -137,6 +137,11 @@ explore: dm_gl_acct_fact {
 #explore: dm_sbsdry_dim {}
 
 explore: dm_txn_fact {
+  join: dm_date {
+    type: left_outer
+    sql_on: ${dm_txn_fact.txn_date} = ${dm_date.day_dt_date};;
+    relationship: many_to_one
+  }
   join: dm_calndr_dim {
     type: left_outer
     sql_on: ${dm_txn_fact.calndr_dim_id} = ${dm_calndr_dim.calndr_dim_id};;
